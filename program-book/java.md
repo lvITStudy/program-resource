@@ -3,5 +3,179 @@
 
 > 读书是为了学习，学习是为了使用，用来解决问题，解决难题可以进步，从读书到进步
 
-## Java书籍思维导图
+**使用方法**
+- CTRL + F + [你想要的关键字]
+- 也可以按照顺序阅读
 
+## 书籍列表及说明
+- Effective Java中文版（第2版）: **EJ2** *1.1 章节1，第1条建议*
+- Java.Concurrency.in.Practice 中文版: **JCIP**
+- Java 8实战: **J8IA** *1.1 章节1，第1节*
+- Java Puzzlers: **JP** *1 第1个难题*
+- Java核心技术（第9版）卷I 卷II: **JC1** **JC2**
+
+## Java书籍思维导图
+### J2SE
+- 语法
+    - 变量
+        - 变量声明的谜题  **[JP P9]**
+        - 赋值语句的谜题  **[JP P10]**
+        - final  **[JP P38]**, **[JP P72]**
+        - static **[JP P48]**
+        - 初始化与lazy initialize **[JP P52]**, **[EJ2 10.71]**
+        - Null与void **[JP P53]**
+        - 作用域隐藏 **[JP P66]**
+        - import与静态导入 **[JP P71]**
+    - 字符串 **[EJ2 8.50]**
+        - 字符串/字符连接的谜题  **[JP P11]**,  **[JP P12]**
+        - 字符连接性能 **[EJ2 8.51]**
+        - Unicode与转义字符  **[JP P14]**, **[JP P15]**, **[JP P17]**
+        - 行分隔符  **[JP P16]**
+        - byte与字符  **[JP P18]**
+    - 名字重用（override overload） **[JP P73]**, **[EJ2 7.41]**
+        - 操作符重载  **[JP P30]**
+    - 控制流
+        - Optional **[J8IA 10]**
+        - 循环边界  **[JP P26]**
+        - 循环中的 i **[JP P27]**,  **[JP P34]**
+        - 循环与异常  **[JP P42]**
+        - 递归  **[JP P45]**
+        - for-each **[EJ2 8.46]**
+    - 断言
+    - 表达式 操作符
+       - 异或交换数值  **[JP P7]**
+       - 条件操作符测试(Dos Equis)  **[JP P8]**
+       - 条件操作符优先级  **[JP P13]**
+       - 增量操作符++  **[JP P25]**
+       - 复合操作符  **[JP P31]**
+    - 注释(Comment)
+       - javadoc **[EJ2 7.44]**
+       - 块注释  **[JP P19]**
+       - 注释与URL  **[JP P22]**
+    - 注解(Annotation)
+    - Lambda表达式  **[J8IA 3]**
+    - 函数式编程(流) **[J8IA 4]**, **[J8IA 5]**, **[J8IA 6]**
+    - 迭代器 (Iterator)
+        - Spliterator **[J8IA 7.3]**
+- 数值
+    - 整数
+        - 判断奇数 **[JP P1]**
+        - 溢出   **[JP P33]**, **[JP P55]**
+        - 余数 **[JP P64]**
+    - BigInteger之不可变 **[JP P56]**
+    - BigDecimal
+    - 八进制 **[JP P59]**
+    - hex 十六进制 **[JP P5]** 
+    - long 长整数 **[JP P3]**
+    - float, double 浮点数 **[JP P2]**, **[JP P28]**, **[EJ2 8.48]**
+    - NaN  **[JP P29]**
+    - 混合类型
+        - 混合类型转换  **[JP P6]**
+        - 混合类型比较 **[JP P24]**
+    - 随机数(Random)  **[JP P23]**
+- 数据结构
+    - 数组(Array): **[JP P60]**, **[EJ2 7.43]**
+    - 集合
+    - 枚举 **[JP P75]**, **[EJ2 6]**
+    - Map/HashMap/IdentitiHashMap **[JP P62]**
+    - 列表(List)
+        - 排序(Comparable) **[JP P65]**
+- 异常处理(Exception) **[EJ2 9]**
+    - try-catch  **[JP P36]**
+    - 受检异常(checked exception)  **[JP P37]**
+    - NoClassDefFoundError  **[JP P44]**
+- 多线程
+    - Synchronizer
+    - 线程池 ThreadPoolExecutor
+    - 线程同步
+    - 共享可变数据 **[EJ2 10.66]**
+    - 多线程性能
+    - 线程安全（原子性/锁/Lock/ReentrantLock）
+    - 死锁
+    - 异步处理(Future, CompletableFuture): **[J8IA 11]**
+    - wait, notify **[EJ2 10.68]**
+    - java.util.concurrent
+    - 线程调度 **[EJ2 10.72]**
+    - 线程组 **[EJ2 10.73]**
+    - 任务
+        - CompletableFuture
+        - Executor（任务执行/取消/关闭） **[EJ2 10.68]**
+        -分支/合并框架(Fork/Join): ExecutorService, ForkJoinPool： **[J8IA 7.2]**
+- System
+    - Runtime  hook **[JP P39]**
+- 时间和日期
+    - LocalDate 、 LocalTime 、 Instant 、 Duration 以及 Period：  **[J8IA 12.1]**
+    - 解析日期格式: **[J8IA 12.2]**
+    - 时区和日历(TimeZone, ZoneId): **[J8IA 12.3]**, **[JP P49]**, **[JP P61]**
+- I/O
+    - 序列化(Serializable) **[EJ2 11]**
+        - readObject方法
+    - 流 Stream  **[J8IA 1.3]**
+        - 并行流  parallelStream **[J8IA 7]**
+        - Stream 的延迟计算 **[J8IA 14.3]**
+        - 关闭流  **[JP P41]**
+    - 文件
+        - XML
+- 数据库（JDBC）
+- 面向对象
+    - 对象通用方法（clone/equals/hashcode/comparable）
+    - 类(Class) **[EJ2 4]**
+        - 类名与反射(Reflection):  **[JP 20]**
+        - 类加载:  **[JP P21]**
+        - 构造器(Constructor)  **[JP P40]**, **[JP P46]**,  **[EJ2 2.2]**
+        - 私有构造器(private constructor) **[JP P53]**, **[EJ2 2.4]**
+    - 对象与方法
+        - 默认方法 **[J8IA 1.3]**, **[J8IA 9]**
+        - equals与hashcode **[JP P57]**, **[EJ2 3.8]**, **[EJ2 3.9]**
+        - hashcode **[JP P58]**, **[JP P74]**
+        - finalizer **[EJ2 2.7]**
+        - toString **[EJ2 2.10]**
+        - clone **[EJ2 2.11]**
+        - Class.newInstance缺陷   **[JP P43]**
+        - instanceof **[JP P50]**
+        - 对象引用 **[EJ2 2.6]**
+        - 可变参数 **[EJ2 7.42]**
+    - 包 **[JP P70]**
+    - 接口 **[EJ2 8.52]**, **[EJ2 8.53]**
+        - comparable接口 **[EJ2 2.12]**
+    - 内部类
+    - 继承  **[JP P47]**, **[JP P51]**, **[JP P69]**
+    - 泛型(Generic) **[EJ2 5]**
+    - 装箱拆箱  **[JP P32]**, **[EJ2 8.49]**
+    - 对象创建销毁 
+    - 分布式对象
+- 模式匹配 Regx
+    - **[J8IA 14.4]**
+- 代码重构 **[J8IA 8.1]**
+- 设计模式 
+    - 策略模式(Strategy) **[J8IA 8.2.1]**
+    - 模板方法(Template) **[J8IA 8.2.2]**
+    - 观察者模式(Observer) **[J8IA 8.2.3]**
+    - 责任链模式(Response Chain) **[J8IA 8.2.4]**
+    - 工厂模式(Factory) **[J8IA 8.2.5]**,  **[EJ2 2.1]**
+    - 单例模式(Singleton) **[EJ2 2.3]**
+- 测试
+    - Lambda调试 **[J8IA 8.3]**
+- 调试
+    - 查看栈跟踪 **[J8IA 8.4.1]**
+- 网络
+- 日志
+    - 使用日志调试 **[J8IA 8.4.2]**
+- JNI **[EJ2 8.54]**
+- 国际化
+- 安全
+- 脚本
+- JavaBean
+- 编程规范
+    - 书写数字1与字母l **[JP P4]**
+    - 魔幻数字(Magic Number)  **[JP P35]**
+    - 构造器与方法 **[JP P63]**
+    - **不要**用基于减法的比较器 **[JP P65]**
+    - **避免**用平台类名 **[JP P67]**
+    - **避免**常量名与类名冲突 **[JP P68]**
+
+## 名词问答
+- 什么是函数式编程？ **[J8IA 13.2]**
+- 一些比较搞的名词 Override, Overload, shadow, hide？ **[JP]术语表**
+- 不可变（immutable）对象？ **[EJ2 2.5]**, **[EJ2 10.70]**
+- 无条件线程安全、有条件线程安全、非线程安全？ **[EJ2 10.70]**
