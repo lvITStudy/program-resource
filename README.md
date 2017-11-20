@@ -10,3 +10,6 @@
 ## 用好教程
 * Java
    * [J2SE官方教程](program-blog/java-oracle-learn-path.md)
+
+## 编程技术
+* [微信小程序](program-tool/weixin-app.md)
