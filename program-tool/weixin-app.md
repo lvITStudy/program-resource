@@ -32,14 +32,16 @@
         * [不支持的ES6 API](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/details.html#客户端es6-api-支持情况)
 
 <h2 id="wxdoc">开发文档</h2>
+
 <h3>微信开发者文档</h3>
+
 [文档主页](https://mp.weixin.qq.com/debug/wxadoc/dev/index.html)
 
 * [微信开发者工具简介](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/devtools.html)
 
 <h3 id="wxapi">小程序API</h3>
-[API文档](https://mp.weixin.qq.com/debug/wxadoc/dev/api/)
 
+[API文档](https://mp.weixin.qq.com/debug/wxadoc/dev/api/)
 
 * [网络](#wxapi-net)
 * 媒体
@@ -98,19 +100,24 @@
 <h4 id="wxapi-img">图片</h4>
 
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.chooseImage | 从本地相册选择图片或使用相机拍照 | | |
 | wx.previewImage | 预览图片 | | |
 | wx.getImageInfo | 获取图片信息 | | |
 | wx.saveImageToPhotosAlbum | 保存图片到系统相册 | | |
 
 <h4 id="wxapi-record">录音及管理</h4>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.startRecord | 开始录音 | 1.6.0 版本开始，本接口不再维护。建议使用能力更强的 wx.getRecorderManager 接口 | |
 | wx.stopRecord | 停止录音 | | |
 | wx.getRecorderManager | 获取全局唯一的录音管理器 `recorderManager` | 基础库 1.6.0 开始支持 | |
 
 <h4 id="wxapi-audio">音乐播放</h4>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.playVoice | 开始播放语音 | 同时只允许一个语音文件正在播放，如果前一个语音文件还没播放完，将中断前一个语音播放 | 1.6.0 版本开始，本接口不再维护。建议使用能力更强的 [wx.createInnerAudioContext](https://mp.weixin.qq.com/debug/wxadoc/dev/api/createInnerAudioContext.html) 接口 |
 | wx.pauseVoice | 暂停正在播放的语音 | 再次调用wx.playVoice播放同一个文件时，会从暂停处开始播放。如果想从头开始播放，需要先调用 wx.stopVoice | |
 | wx.stopVoice | 结束播放语音 |  | |
@@ -127,14 +134,18 @@
 | wx.createInnerAudioContext | 创建并返回内部 audio 上下文 `innerAudioContext` 对象 | 本接口是 wx.createAudioContext 升级版 | |
 
 <h4 id="wxapi-video">视频播放</h4>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.chooseVideo | 拍摄视频或从手机相册中选视频，返回视频的临时文件路径 | | |
 | wx.saveVideoToPhotosAlbum | 保存视频到系统相册。需要用户授权 [scope.writePhotosAlbum](https://mp.weixin.qq.com/debug/wxadoc/dev/api/authorize-index.html) | | |
 | wx.createVideoContext | 创建并返回 video 上下文 `videoContext` 对象 | | |
 | wx.createCameraContext | 创建并返回 camera 上下文 `cameraContext` 对象，`cameraContext` 与页面的 `camera` 组件绑定 | 一个页面只能有一个camera，通过它可以操作对应的 `<camera/>` 组件 | |
 
 <h4  id="wxapi-file">文件</h4>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.saveFile | 保存文件到本地 | | |
 | wx.getFileInfo | 获取文件信息 | | |
 | wx.getSavedFileList | 获取本地已保存的文件列表 | | |
@@ -143,9 +154,11 @@
 | wx.openDocument | 新开页面打开文档 | 支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx | |
 
 <h4 id="wxapi-storage">数据缓存</h4>
+
 本地数据存储的大小**限制为 10MB**
 
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.setStorage | 将数据存储在本地缓存中指定的 key 中 | 会覆盖掉原来该 key 对应的内容，这是一个异步接口 | |
 | wx.setStorageSync | 将 data 存储在本地缓存中指定的 key 中 | 会覆盖掉原来该 key 对应的内容，这是一个同步接口 | |
 | wx.getStorage | 从本地缓存中异步获取指定 key 对应的内容 |  | |
@@ -159,14 +172,18 @@
 
 
 <h4 id="wxapi-location">位置</h4>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.getLocation | 获取当前的地理位置、速度 | 用户离开小程序后，此接口无法调用；当用户点击“显示在聊天顶部”时，此接口可继续调用 | |
 | wx.chooseLocation | 打开地图选择位置 | 需要[用户授权](https://mp.weixin.qq.com/debug/wxadoc/dev/api/authorize-index.html) scope.userLocation | |
 | wx.openLocation | ​使用微信内置地图查看位置 | 需要[用户授权](https://mp.weixin.qq.com/debug/wxadoc/dev/api/authorize-index.html) scope.userLocation | |
 | wx.createMapContext | 创建并返回 map 上下文 `mapContext` 对象 | | |
 
 <h4 id="wxapi-device">设备</h4>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.getSystemInfo | 获取系统信息 | | |
 | wx.getSystemInfoSync | 获取系统信息同步接口 | | |
 | wx.canIUse | 判断小程序的API，回调，参数，组件等是否在当前版本可用 | | |
@@ -191,7 +208,9 @@
 | wx.addPhoneContact | 调用后，用户可以选择将该表单以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。 | | |
 
 <h5>蓝牙</h5>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.openBluetoothAdapter | 初始化小程序蓝牙模块 | 生效周期为调用 `wx.openBluetoothAdapter` 至调用 `wx.closeBluetoothAdapter` 或小程序被销毁为止 | |
 | wx.closeBluetoothAdapter | 关闭蓝牙模块，使其进入未初始化状态 | 调用该方法将断开所有已建立的链接并释放系统资源。建议在使用小程序蓝牙流程后调用，与 `wx.openBluetoothAdapter` 成对调用 | |
 | wx.getBluetoothAdapterState | 获取本机蓝牙适配器状态 | | |
@@ -214,6 +233,7 @@
 **蓝牙错误码列表**
 
 |错误码 |说明 |备注 |
+| :------------ |:---------------:| -----:|
 | 0 | ok  | 正常 |
 | 10000 | not init    | 未初始化蓝牙适配器 |
 | 10001 | not available   | 当前蓝牙适配器不可用 |
@@ -227,7 +247,9 @@
 | 10009 | system not support |  Android 系统特有，系统版本低于 4.3 不支持BLE |
 
 <h5>iBeacon</h5>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.startBeaconDiscovery | 开始搜索附近的iBeacon设备 |  |  |
 | wx.stopBeaconDiscovery | 停止搜索附近的iBeacon设备 |  |  |
 | wx.getBeacons | 获取所有已搜索到的iBeacon设备 |  |  |
@@ -237,6 +259,7 @@
 **iBeacon错误码列表**
 
 |错误码 |说明 |备注 |
+| :------------ |:---------------:| -----:|
 | 0 |  ok | 正常 |
 | 11000 |  unsupport  | 系统或设备不支持 |
 | 11001 |  bluetooth service unavailable  | 蓝牙服务不可用 |
@@ -244,7 +267,9 @@
 | 11003 |  already start  | 已经开始搜索 |
 
 <h4 id="wxapi-react">界面交互</h4>
+
 |API |功能 |说明 |示例 | 
+| :------------ |:---------------:| -----:| -----:|
 | wx.showToast | 显示消息提示框 |  |  |
 | wx.showLoading | 显示 loading 提示框 | 需主动调用 [wx.hideLoading](https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxhideloading) 才能关闭提示框 |  |
 | wx.hideToast | 隐藏消息提示框 |  |  |
@@ -279,6 +304,7 @@
 * 调试接口
 
 <h3 id="mina">小程序框架 MINA</h3>
+
 [MINA主页](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/MINA.html)
 
 * [app.json配置](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html)
@@ -287,10 +313,13 @@
 *  [事件](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html)
 
 <h3 id="weui">小程序UI组件-WeUI</h3>
+
 [基础组件](https://mp.weixin.qq.com/debug/wxadoc/dev/component/)
 
 <h2>微信开发者工具</h2>
+
 <h3>调试</h3>
+
 * 调试器 Console：输入和调试代码，比起在debug里面查看变量方便很多
 * 调试器 Wxml：可以直接查看wxml 转化后的界面，与chrome里面查看html的DOM模型一样
 * 调试器 Source：查看源码，下断点，调试
@@ -300,8 +329,11 @@
 * 调试器 Sensor：模拟地理位置和重力感应，高级功能（不大常用:P）
 
 <h2>相关技术</h2>
+
 <h3>JavaScript在小程序开发中的用法</h3>
+
 <h4>箭头函数</h4>
+
 ```
     wx.login({
       success: res => {
@@ -321,6 +353,7 @@
 ```
 
 <h4>逻辑运算符 &#124;&#124;</h4>
+
 ```
 var logs = wx.getStorageSync('logs') || []
 ```
@@ -334,6 +367,7 @@ var logs = wx.getStorageSync('logs') || []
 **上面语句的含义**：返回 logs 非空数组（本地缓存），或者返回空数组
 
 <h4>数组操作 unshift</h4>
+
 ```
   onLaunch: function () {
     // 展示本地存储能力
@@ -346,6 +380,7 @@ var logs = wx.getStorageSync('logs') || []
 * 小程序初始化完成  `onLaunch` 事件发生，会记录当前日期到 logs 数组，存储到本地缓存
 
 <h4>this对象</h4>
+
 ```
 wx.getUserInfo({
     success: res => {
@@ -363,6 +398,7 @@ wx.getUserInfo({
 * 这段代码的目的，就是为了防止 Page.onLoad 比  `onLaunch` 事件中请求的用户信息成功之前已运行，此时app.globalInfo.userInfo的值是空的，所以还需要再重新对其进行赋值
 
 <h4>全局变量</h4>
+
 ```
   globalData: {
     userInfo: null
@@ -375,6 +411,7 @@ app.js 里定义了 `globalData` 全局变量，于是在各个地方都用到�
 *  `CTRL+SHIFT+F` 查找  `globalData`：可以看到，在 app.js 和 index.js 中分别进行了赋值和使用
 
 <h4>console.log</h4>
+
 ```
   getUserInfo: function(e) {
     console.log(e)
