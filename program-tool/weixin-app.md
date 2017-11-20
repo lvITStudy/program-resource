@@ -81,6 +81,7 @@
 * [调试接口](#wxapi-)
 
 <h4 id="wxapi-net">网络</h4>
+
 |API |功能 |说明 |示例 | 
 | :------------ |:---------------:| -----:| -----:|
 | wx.request | 发起网络请求 | | |
@@ -95,6 +96,7 @@
 | wx.onSocketClose | 监听 WebSocket 关闭 | | |
 
 <h4 id="wxapi-img">图片</h4>
+
 |API |功能 |说明 |示例 | 
 | wx.chooseImage | 从本地相册选择图片或使用相机拍照 | | |
 | wx.previewImage | 预览图片 | | |
