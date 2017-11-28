@@ -16,3 +16,6 @@
 
 ## 技术词汇表
 * [Java](program-vocabulary/java.md)
+
+## 工具
+* [搜索技巧](program-tool/search-skill.md)
